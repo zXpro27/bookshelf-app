@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="assets/img/books-logo.ico" alt="Icon-books">
+    <title>Bookshelf Apps - Penyimpanan Rak Buku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <img src="assets/img/books-logo.png" alt="Bookshelf Apps - Aldi">
+    <nav>
+      <a href="index.html">Bookshelf</a>
+    </nav>
+    <form class="search-box">
+      <input type="search" class="search-bar" placeholder="Judul buku..." />
+      <button class="search-btn">
+        <span class="search-icon"></span>
+      </button>
+  </form>
+  </header>
+  <main>
+    <article class="content-wrap-left">
+      <h1>Masukkan Buku Baru</h1>
+      <form id="inputBook">
+        <div class="input">
+          <label for="inputBookTitle">judul</label>
+          <input type="text" id="inputBookTitle" placeholder="Masukkan Judul Buku" required />
+        </div>
+        <div class="input">
+          <label for="inputBookAuthor">penulis</label>
+          <input type="text" id="inputBookAuthor" placeholder="Masukkan Nama Penulis" required />
+        </div>
+        <div class="input">
+          <label for="inputBookYear">tahun</label>
+          <input type="number" id="inputBookYear" placeholder="Masukkan Tahun Terbit" required />
+        </div>
+        <div class="input-choose">
+          <label for="inputBookIsComplete">Selesai Dibaca?</label>
+          <input type="checkbox" id="inputBookIsComplete" class="ceklis" />
+        </div>
+        <button type="submit" class="btn-submit"><img src="assets/img/btn.svg" alt="submit - icon" width="50px" height="50px">tambahkan buku</button>
+      </form>
+    </article>
+    <article class="content-wrap-right">
+      <section class="box-content">
+        <h1>Belum selesai dibaca</h1>
+        <div class="card-box" id="incompleteBookshelfList"></div>
+      </section>
+      <section class="box-content">
+        <h1>Selesai dibaca</h1>
+        <div class="card-box" id="completeBookshelfList"></div>
+    </section>
+    </article>
+  </main>
+  <footer>
+    <p>&copy;2022 Aldiansyah || All Rights Reserved</p>
+  </footer>
+  <script src="main.js"></script>
+  <script src="components/storage.js"></script>
+  <script src="components/card.js"></script>
+  <script src="components/search.js"></script>
+</body>
+</html>
